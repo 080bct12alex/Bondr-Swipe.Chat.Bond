@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Conversations from "./Conversations";
 import LogoutButton from "./LogoutButton";
-import SearchInput from "./SearchInput"; // Correct import
+import SearchInput from "./SearchInput";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,11 +40,10 @@ const Sidebar = () => {
             </h1>
           </div>
 
-         {/* Search Input - Use the imported component */}
-<div className="pl-0 pr-0  overflow-auto
-">
-  <SearchInput />
-</div>
+          {/* Search Input */}
+          <div className="pl-0 pr-0 overflow-auto">
+            <SearchInput />
+          </div>
 
           {/* Conversations List */}
           <div className="flex-1 overflow-y-auto">
