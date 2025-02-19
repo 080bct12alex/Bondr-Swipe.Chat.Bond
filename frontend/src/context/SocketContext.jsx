@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://bondr-swipe-chat-bond.onrender.com", {   // applink
+			const socket = io("https://bondr.onrender.com", {   // applink
 				query: {
 					userId: authUser._id,
 				},
