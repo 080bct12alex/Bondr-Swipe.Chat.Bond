@@ -27,10 +27,9 @@ const Sidebar = () => {
       </div>
 
       {/* Sidebar Container */}
-      <div className={`fixed inset-y-0 left-0 z-40 w-64 transform bg-gray-900 border-r border-gray-700 transition-all duration-300 ease-out md:translate-x-0 ${
+      <div className={`fixed left-0 z-40 w-64 transform bg-gray-900 border-r border-gray-700 transition-all duration-300 ease-out md:translate-x-0 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } md:static md:h-screen`}
-      style={{ top: '4rem', height: 'calc(100vh - 4rem)' }}>
+      } top-16 h-[calc(100vh-4rem)] md:top-0 md:h-screen`}>
         
         <div className="flex flex-col h-full p-4 space-y-4 overflow-hidden">
           {/* Desktop Header */}
