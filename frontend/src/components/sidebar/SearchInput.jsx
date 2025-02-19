@@ -40,7 +40,6 @@ const SearchInput = () => {
 		}
 	}, [search, normalizedConversations, setSelectedConversation]);
 
-	// Clear search input   not included
 	
 
 	return (
@@ -59,17 +58,7 @@ const SearchInput = () => {
 					onChange={(e) => setSearch(e.target.value)}
 					aria-label="Search conversations"
 				/>
-				<button 
-					type="submit" 
-					className="btn btn-circle bg-sky-500 text-white
-						max-sm:w-10 max-sm:h-10 max-sm:min-h-0
-						sm:w-12 sm:h-12
-						hover:bg-sky-600 active:scale-95 transition-transform"
-					aria-label="Submit search"
-				>
-					<IoSearchSharp className="w-4 h-4 sm:w-5 sm:h-5" />
-				</button>
-				//clear button not included
+				
 			</div>
 		</form>
 	);
