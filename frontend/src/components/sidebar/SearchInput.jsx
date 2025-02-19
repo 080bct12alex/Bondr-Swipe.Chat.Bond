@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import { IoSearchSharp } from "react-icons/io5";
+import { IoSearchSharp, IoCloseSharp } from "react-icons/io5"; // Import close icon
 import useConversation from "../../zustand/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
@@ -40,9 +40,12 @@ const SearchInput = () => {
 		}
 	}, [search, normalizedConversations, setSelectedConversation]);
 
+	// Clear search input   not included
+	
+
 	return (
-		<form onSubmit={handleSubmit} className="w-full flex items-center	  ">
-			<div className="flex items-center gap-0 sm:gap-10">
+		<form onSubmit={handleSubmit} className="w-full flex items-center">
+			<div className="flex items-center gap-2 sm:gap-4">
 				<input
 					type="text"
 					placeholder="Search…"
@@ -66,6 +69,7 @@ const SearchInput = () => {
 				>
 					<IoSearchSharp className="w-4 h-4 sm:w-5 sm:h-5" />
 				</button>
+				//clear button not included
 			</div>
 		</form>
 	);
