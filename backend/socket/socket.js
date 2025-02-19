@@ -3,11 +3,12 @@ import http from "http";
 import express from "express";
 
 const app = express();
+app.set('trust proxy', 1); // Required for Render's reverse proxy
 
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: ["https://localhost:3000/"],
+		origin: ["https://bondr.onrender.com"],
 		methods: ["GET", "POST"],
 	},
 });
